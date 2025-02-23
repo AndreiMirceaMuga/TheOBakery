@@ -31,7 +31,7 @@ namespace TheOBakery.Repositories
                     _context.SaveChanges();
                 }
             }
-            public IEnumerable<Product> GetProduct()
+            public IEnumerable<Product> GetProducts()
             {
                 return _context.Products.ToList();
             }

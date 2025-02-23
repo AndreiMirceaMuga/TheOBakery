@@ -5,8 +5,7 @@ using TheOBakery.Repositories;
 
 namespace TheOBakery
 {
-    //For migration CartContent for foreign keys I have onDelete: ReferentialAction.Restrict);
-    //What is the impact S13-p3-00:40:57
+    
     public class Program
     {
         public static void Main(string[] args)
@@ -23,6 +22,10 @@ namespace TheOBakery
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
             builder.Services.AddTransient<CustomerRepository>();
+            builder.Services.AddTransient<ProductRepository>();
+            builder.Services.AddTransient<OrderRepository>();
+            builder.Services.AddTransient<PaymentRepository>();
+            builder.Services.AddTransient<CartContentRepository>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

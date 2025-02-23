@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+
 namespace TheOBakery.Models.DBObject
 {
     public class CartContent
